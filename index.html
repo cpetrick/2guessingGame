@@ -4,18 +4,46 @@
 	<title>Guessing Game | Part II</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<div align="center">
-<body style="background-color:#E6E6E6">
-<h3 style="font-family: Courier">How are you enjoying the hot weather we are having?</h3>
-<h5 style="font-family: Courier">Please take a moment and express your thoughts, I want to know what you are thinking.</h5>
-<textarea rows="3" cols="80">
-	
-</textarea>
-</br>
-<h5 style="font-family: Courier">If you're interested to know the character and/or word count...click below</h5>
-</br>
+	<div align="center">
+	<body style="background-color:	#CCCCCC">
+	<h2 style="font-family: Courier">How are you enjoying the hot weather we are having?</h2>
+	<h4 style="font-family: Courier">Please take a moment and share your thoughts, I want to know what you are thinking.</h4>
+	<textarea id='input'>
+		
+	</textarea>
+	</br>
+	<h4 style="font-family: Courier">If you'd like to know the character and/or word count...click below</h4>
+	</br>
+    <button onclick='count()'>Click here for Character and Word Count</button>
+    <p id='results'></p>
 
-<button type="button">Click here for Character/Word count</button>
+    <script>
+    	var input = document.getElementById('input');
+        var results = document.getElementById('results');
+       
+			function count(){
+            var sentence = input.value;
+            var length = sentence.length;
+            var letterCount = 0;
+            var wordCount = 1;
+            var letter;
+				for ( var i = 0; i < length; i++ ) {
+                letter = sentence[i];
+                if ( letter != ' ' ) {
+                    letterCount = letterCount + 1;
+                
+                }
+                else if ( sentence[i - 1] !== ' ' ) {
+                 
+                    wordCount = wordCount + 1;
+                }
+            }
+            results.innerHTML = 'The character count is ' +  letterCount
+             
+             + '\nthe word count is ' + wordCount;
+        }
+    </script>
+	
 </div>
 </body>
 
