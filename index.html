@@ -8,7 +8,7 @@
 	<body style="background-color:	#CCCCCC">
 	<h2 style="font-family: Courier">How are you enjoying the hot weather we are having?</h2>
 	<h4 style="font-family: Courier">Please take a moment and share your thoughts, I want to know what you are thinking.</h4>
-	<textarea id='input'>
+	<textarea id='textbox'>
 		
 	</textarea>
 	</br>
@@ -18,11 +18,11 @@
     <p id='results'></p>
 
     <script>
-    	var input = document.getElementById('input');
+    var textbox = document.getElementById('textbox');
         var results = document.getElementById('results');
        
 			function count(){
-            var sentence = input.value;
+            var sentence = textbox .value;
             var length = sentence.length;
             var letterCount = 0;
             var wordCount = 1;
@@ -40,7 +40,7 @@
             }
             results.innerHTML = 'The character count is ' +  letterCount
              
-             + '\nthe word count is ' + wordCount;
+             + '\nand the word count is ' + wordCount;
         }
     </script>
 	
