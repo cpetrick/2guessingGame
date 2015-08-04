@@ -5,7 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 	<div align="center">
-	<body style="background-color:	#FF0000">
+	<body style="background-color:	#CCCCCC">
 	<h2 style="font-family: Courier">How are you enjoying the hot weather we are having?</h2>
 	<h4 style="font-family: Courier">Please take a moment and share your thoughts, I want to know what you are thinking.</h4>
 	<textarea id='textbox'>
@@ -14,14 +14,14 @@
 	</br>
 	<h4 style="font-family: Courier">If you'd like to know the character and/or word count...click below</h4>
 	</br>
-    <button onclick='count()'>Click here for Character and Word Count</button>
+    <button onclick='countWords()'>Click here for Character and Word Count</button>
     <p id='results'></p>
 
     <script>
     var textbox = document.getElementById('textbox');
         var results = document.getElementById('results');
        
-			function count(){
+			function countWords(){
             var sentence = textbox .value;
             var length = sentence.length;
             var letterCount = 0;
@@ -38,9 +38,9 @@
                     wordCount = wordCount + 1;
                 }
             }
-            results.innerHTML = 'The character count is ' +  letterCount
+            results.innerHTML = 'The number of characters is ' +  letterCount
              
-             + '\nand the word count is ' + wordCount;
+             + ' and the number of words is ' + wordCount;
         }
     </script>
 	
